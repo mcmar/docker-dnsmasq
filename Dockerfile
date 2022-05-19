@@ -4,6 +4,6 @@ RUN apk --no-cache add dnsmasq
 
 VOLUME /etc/dnsmasq
 
-EXPOSE 53 53/udp
+EXPOSE 53/tcp 53/udp 67/udp
 
 ENTRYPOINT ["dnsmasq", "-k"]
